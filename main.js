@@ -10,6 +10,11 @@ router.get("/", (req, res) => {
   utils.getFile("views/index.html", res);
 });
 
+router.get("/student.html", (req, res) => {
+  res.writeHead(httpStatus.OK, contentTypes.html);
+  utils.getFile("views/student.html", res);
+});
+
 router.get("/about.html", (req, res) => {
   res.writeHead(httpStatus.OK, contentTypes.html);
   utils.getFile("views/about.html", res);

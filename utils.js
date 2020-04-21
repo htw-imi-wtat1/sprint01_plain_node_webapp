@@ -10,7 +10,7 @@ module.exports = {
         contentTypes.html);
         res.end("There was an error reading the requested file: "+file);
       }
-      res.end(data);
+      res.end(data,"UTF-8");
     });
   }
 };
