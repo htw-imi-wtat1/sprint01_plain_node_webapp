@@ -8,12 +8,23 @@ const routes = {
 };
 
 exports.handle = (req, res) => {
+  // console.log ("handling "+req.url);
+  // console.log ("routes: "+ JSON.stringify(routes));
+  // console.log (Object.keys(routes["GET"]));
   try { routes[req.method][req.url](req,res);
   } catch (e) {
     res.writeHead(httpStatus.OK, contentTypes.html);
-    utils.getFile("views/error.html",res);
+    res.end("caught exception: "+ e.message);
   }
+};
 
+routes["GET"]["/debug"] = (req, res) => {
+  res.writeHead(httpStatus.OK, contentTypes.html);
+  res.write("GET routes: ");
+  res.write(JSON.stringify(Object.keys(routes["GET"])));
+  res.write("POST routes: ");
+  res.write(JSON.stringify(Object.keys(routes["POST"])));
+  res.end("- done -");
 };
 
 exports.get = (url, action) => {

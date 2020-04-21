@@ -2,6 +2,10 @@
 
 Implementing Stories
 
+    Story_042 - As a student or lecturer, I see an overview of the whole study program with all modules including Title, Format and ECTS on the site.
+    Story_023 - As a student, I can quickly get an overview of the my progress within the study program.
+
+
 ## created project structure
 
     touch main.js

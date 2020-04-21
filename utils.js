@@ -8,7 +8,7 @@ module.exports = {
       if (error){
       res.writeHead(httpStatus.INTERNAL_SERVER_ERROR,
         contentTypes.html);
-        res.end("There was an error reading the requested file!");
+        res.end("There was an error reading the requested file: "+file);
       }
       res.end(data);
     });
