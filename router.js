@@ -1,6 +1,6 @@
 const httpStatus = require("http-status-codes"),
   contentTypes = require("./contentTypes"),
-  utils = require("utils");
+  utils = require("./utils");
 
 const routes = {
   "GET": {},
