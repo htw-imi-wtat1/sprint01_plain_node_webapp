@@ -22,7 +22,7 @@ router.get("/about.html", (req, res) => {
 
 router.get("/bootstrap.css", (req, res) =>{
   res.writeHead(httpStatus.OK, contentTypes.js);
-  utils.getFile("public/css/bootstrap.css", res);
+  utils.getFile("node_modules/bootstrap/dist/css/bootstrap.min.css", res);
 
 });
 
